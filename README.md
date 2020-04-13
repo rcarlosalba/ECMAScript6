@@ -136,6 +136,272 @@ console.log(calc.sum(2,2))
 `importe {nombreFuncion} from './nombreArchivo'`
 
 ## Generadores
+- Es una función que retorna una serie de valores definidos: 
+`function*helloWorld(){
+    if(true){
+        yield'Hello, '//Guarda el estado de forma interna
+    }
+    if(true){
+        yield'World '//El segundo valor es llamado cuando se ejecuta el siguiente valor
+    }
+        
+};
+
+const generatorHello =helloWorld();
+//Luego puedo utilizar valor next, ejecuto lógica, y al ejecutar el siguiente next se meustra el segundo valor, hasta n next.
+
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value); // Al no tener ningún valor en el siguiente next, al ejectuar muestra un "Undefined".
+`
+
+## ECMAScript 7
+- Se lanza en Junio de 2016:
+-  Se agrega el metodo includes que verifica el contenido de un arreglo. 
+`letnumber =[1,2,3,4,6];
+
+if(number.includes(6)){
+    console.log("Se encuentra el valor");
+}else{
+    console.log("No se encuentra el valor");
+}
+`
+- Las potencias ahora se operan con doble asterisco :
+`let base =4;
+let exponent =3;
+let resultado = base**exponent;
+
+console.log(resultado);
+`
+## ECMAScript 8 
+- Se lanza en juio de 2017.
+- Object entries devuelve los valores de una matriz.
+`
+const data ={
+    front:'Isabel',
+    back: 'Ana'
+};
+`
+- Tranformar este objeto en una matriz. 
+`const entries =Object.entries(data);
+console.log(entries);`
+- Si queremos saber cuantos elementos posee nuestro arreglo ahora es posible con length:
+`console.log(entries.length);`
+
+- Objetc Values: Me devuelve los valores de un objeto a un arreglo. los transforma.
+`const data= {
+    front:'Isabel',
+    back: 'Ana'
+}
+
+const values = Object.values(data);
+console.log(values);
+`
+- Pading: nos permite añadir cadenas vacías a string, pudiendo modificar la cadena string como tal.
+- Podría servir del lado del front , para mostrar una estructura de elementos.
+`
+const string ='hello';
+console.log(string.padStart(7,'hi')) // se añade al inicio la palabra 'hi'
+console.log(string.padEnd(12,'hi')) // Se añade al final la palabra 'hi'
+`
+
+- Trailing comas, nos permite asignar elementos al objeto mediante comas. Aun cuando no sean necesarias las comas al final se colocan.
+`
+const data= {
+    front:'Ana',
+    back: 'Isabel',
+}
+`
+### Async Await 
+Nos permime manejar el asincronismo: 
+`
+const helloWorld =() =>{
+    return new Promise((resolve,reject)=>{
+        (true)
+        ? setTimeout(()=>resolve('helloWorld'),3000)
+        : reject(new Error ('Test Error'))
+    })
+}
+
+const helloAsync =async() =>{
+    const hello = await helloWorld();
+    console.log(hello);
+
+}
+helloAsync();
+`
+- Nos permitirá usar try, catch y trabajar los errores correctamente.
+
+`const another =async() =>{
+    try{
+        const hello = await helloWorld();
+        console.log(hello);
+
+    } catch (error){
+        console.log(error);
+    }
+}
+
+another();`
+
+## ECMAScript 9
+- Operador de reposo puede extraer las propiedades de un objeto que aún no se ha construido. ...all
+`const obj= {
+    name:'Carlos', 
+    nick: 'rcamaster',
+    age: 34,
+    country: 'MX'
+}
+
+let{name, ...all}=obj;
+console.log(name,all); 
+se extrae el nombre y lo demas se " encapsula" en un objeto.
+`
+- Utilizando propiedades de propagación se pueden añadir multiples objetos a otros objetos mediante ...nombre_objeto
+
+`const obj= {
+    name:'Carlos', 
+    nick: 'rcamaster'
+}
+const obj1= {
+    ...obj,
+    alter:'rcarlosalba', 
+    alternick: 'carielalba'
+}
+const obj2= {
+    ...obj1,
+    loveone:'Emma', 
+    nickloveone: 'Elu'
+}
+
+console.log(obj2);
+nos permite generar nuevos objetos in alterar los existentes
+`
+- Promise.finally podemos saber cuando ha terminado el llamado para ejecutar una función.
+`
+const helloWorld =() =>{
+    returnnew Promise((resolve,reject)=>{
+        (true)
+        ? resolve('helloWorld')
+        : reject(newError ('Test Error'))
+    });
+}
+
+helloWorld()
+    .then(response => console.log(response))
+    .catch(error=>console.log(error))
+    .finally(()=>console.log('finalizo'))
+`
+## RegEx
+Agrupando bloques: 
+`
+const regexData = /([0-9]{4})-([0-9]{2})-([0-9]{2})/
+const match = regexData.exec('2018-04-20');
+
+const year = match[1]
+const month = match[2]
+const day = match[3]
+
+console.log(year, month, day);
+`
+## ECMAScript 10
+- .flat devuelve una matriz con una submatriz aplanada.
+- recibe como argunmento la profundidad o nivel
+`
+let array = [1,2,3, [1,2,3, [1,2,3]]];
+
+console.log(array.flat(2))
+`
+
+- .flatMap: mapear cada elemento, luego pasarle una funcion y aplanar
+`
+let array = [1,2,3,4,5];
+
+console.log(array.flatMap(value => [value, value * 2]));
+`
+- trim: 
+- Elimina los espacios en blanco de un string.
+`
+let hello = '                      hello world';
+console.log(hello);
+console.log(hello.trimStart()); // inicio
+
+let hello = 'hello world                  ';
+console.log(hello);
+console.log(hello.trimEnd()); // final
+`
+- optional catch biding
+`
+try {
+    
+} catch/*(error) ya no es necesario colocarlo*/ {
+    error
+}
+`
+- fromEntries
+- arreglo a objeto:
+`let entries = [["name", "oscar"], ["age", 32]];
+console.log(Object.fromEntries(entries))
+`
+- symbol object:
+`
+let mySymbol = 'My Symbol';
+let symbol = Symbol(mySymbol);
+console.log(symbol.description);
+`
+## TC39
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
