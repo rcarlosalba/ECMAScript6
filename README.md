@@ -7,22 +7,24 @@ Implementaciones a partir de ECMAScript 6+
 JS Nace en 1996 con la propuesta de Netscape.
 
 ## ECMAScript 6 
-Cambia la forma de enviar parametros a las funciones: 
-Antes: 
+- Cambia la forma de enviar parametros a las funciones: 
+
+- Antes: 
 `function newFunction(name,  age, country){
 var name = name || 'Ramon'
 var age = age || 33
 var country = country || 'CO'
 }`
 
-Ahora: 
+- Ahora: 
 `function newFunction2(name = 'Ramon', age = 33, country = 'CO'){
   doSomething...
 }`
 
-Al invocarla: 
+- Al invocarla: 
 `newFunction2()`
-Sin parametros, traería los establecidos ó
+
+- Sin parametros, traería los establecidos ó
 `newFunction2('Ricardo', 23, 'MX')`
 
 
