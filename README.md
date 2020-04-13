@@ -27,7 +27,12 @@ var country = country || 'CO'
 - Sin parametros, traería los establecidos ó
 `newFunction2('Ricardo', 23, 'MX')`
 
-
+## Teplates Literal // Templates String
+Concatenar valores es ECMAScript 6 es más claro: 
+`let hello = "Hello"
+let world = "World"
+console.log(`${hello} ${world}`)
+`
 
 
 
