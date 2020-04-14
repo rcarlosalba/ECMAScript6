@@ -139,16 +139,12 @@ console.log(calc.sum(2,2))`
 
 ## Generadores
 - Es una función que retorna una serie de valores definidos: 
-`function*helloWorld(){
+`function* helloWorld(){
     if(true){
-        yield"Hello, " Guarda el estado de forma interna
-    }
-    if(true){
-        yield"World " El segundo valor es llamado cuando se ejecuta el siguiente valor
-    }
-        
+        yield"Hello, "} **Guarda el estado de forma interna
+    if(true){yield"World "} **El segundo valor es llamado cuando se ejecuta el siguiente valor
 }`
-
+- Se invoca: 
 `const generatorHello = helloWorld();`
 - Luego puedo utilizar valor next, ejecuto lógica, y al ejecutar el siguiente next se meustra el segundo valor, hasta n next.
 `console.log(generatorHello.next().value);
