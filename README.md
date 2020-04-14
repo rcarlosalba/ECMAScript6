@@ -36,7 +36,7 @@ console.log(`${hello} ${world}`)
 Se utilizan comillas francesas o inversas y para llamar a las variables se llaman ${}.
 
 ## Multilinea en ECMAScript
-Todo lo que este dentro del template literal pasa a ser multilinea.
+Todo lo que este dentro del template literal (comilla francesa) pasa a ser multilinea.
 `{Todo 
 lo 
 que este
@@ -111,8 +111,8 @@ Se trabaja el asicronismo, JS ejecuta una por una las tareas. Resuleven el probl
 - Para ejecutarla:
 `holaPromesa()
   .then=>(response => console.log(response))
-  .catch(error => console.log(error))
-`
+  .catch(error => console.log(error))`
+  
 ## Clases
 ` class calculator{
     constructor(){
