@@ -147,16 +147,12 @@ console.log(calc.sum(2,2))`
         yield'World '//El segundo valor es llamado cuando se ejecuta el siguiente valor
     }
         
-};
-
-const generatorHello =helloWorld();
-//Luego puedo utilizar valor next, ejecuto lógica, y al ejecutar el siguiente next se meustra el segundo valor, hasta n next.
-
+};`
+`const generatorHello =helloWorld();`
+- Luego puedo utilizar valor next, ejecuto lógica, y al ejecutar el siguiente next se meustra el segundo valor, hasta n next.
+`console.log(generatorHello.next().value);
 console.log(generatorHello.next().value);
-console.log(generatorHello.next().value);
-console.log(generatorHello.next().value); // Al no tener ningún valor en el siguiente next, al ejectuar muestra un "Undefined".
-`
-
+console.log(generatorHello.next().value); // Al no tener ningún valor en el siguiente next, al ejectuar muestra un "Undefined".`
 ## ECMAScript 7
 - Se lanza en Junio de 2016:
 -  Se agrega el metodo includes que verifica el contenido de un arreglo. 
@@ -166,24 +162,23 @@ if(number.includes(6)){
     console.log("Se encuentra el valor");
 }else{
     console.log("No se encuentra el valor");
-}
-`
+}`
+
 - Las potencias ahora se operan con doble asterisco :
+
 `let base =4;
 let exponent =3;
 let resultado = base**exponent;
 
-console.log(resultado);
-`
+console.log(resultado);`
+
 ## ECMAScript 8 
 - Se lanza en juio de 2017.
 - Object entries devuelve los valores de una matriz.
-`
-const data ={
+`const data ={
     front:'Isabel',
     back: 'Ana'
-};
-`
+};`
 - Tranformar este objeto en una matriz. 
 `const entries =Object.entries(data);
 console.log(entries);`
