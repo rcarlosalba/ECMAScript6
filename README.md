@@ -153,21 +153,17 @@ console.log(generatorHello.next().value); Al no tener ningún valor en el siguie
 ## ECMAScript 7
 - Se lanza en Junio de 2016:
 -  Se agrega el metodo includes que verifica el contenido de un arreglo. 
-`letnumber =[1,2,3,4,6];
-
-if(number.includes(6)){
+- Variable: 
+`letnumber =[1,2,3,4,6];`
+- Condición: 
+`if(number.includes(6)){
     console.log("Se encuentra el valor");
 }else{
     console.log("No se encuentra el valor");
 }`
-
 - Las potencias ahora se operan con doble asterisco :
-
-`let base =4;
-let exponent =3;
-let resultado = base**exponent;
-
-console.log(resultado);`
+- Variable: 
+`let base =4; let exponent =3; let resultado = base**exponent; console.log(resultado);`
 
 ## ECMAScript 8 
 - Se lanza en juio de 2017.
