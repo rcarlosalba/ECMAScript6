@@ -114,7 +114,8 @@ Se trabaja el asicronismo, JS ejecuta una por una las tareas. Resuleven el probl
   .catch(error => console.log(error))`
   
 ## Clases
-` class calculator{
+- Creando la clase: 
+`class calculator{
     constructor(){
     this.valueA = 0
     this.valueB = 0
@@ -124,14 +125,15 @@ Se trabaja el asicronismo, JS ejecuta una por una las tareas. Resuleven el probl
     this.valueB = valueB
     return this.valueA + this.valueB
     }
-}
+}`
+- Invocando la clase: 
+`cont calc = new calculator()
+console.log(calc.sum(2,2))`
 
-cont calc = new calculator()
-console.log(calc.sum(2,2))
-`
+
 ## Modulos
 - import y export. Se puede separa la lógica en diferentes nodos. En el archivo a exporta se escribe: 
-`experot default nombreFuncion`
+`export default nombreFuncion`
 - En el archivo que recibe la función es: 
 `importe {nombreFuncion} from './nombreArchivo'`
 
