@@ -221,12 +221,14 @@ Nos permime manejar el asincronismo:
         : reject(new Error ('Test Error'))
     })
 }`
+- luego de crear la promesa se invoca el await:
 `const helloAsync =async() =>{
     const hello = await helloWorld();
     console.log(hello);
 
 }
 helloAsync();`
+
 - Nos permitirá usar try, catch y trabajar los errores correctamente.
 
 `const another =async() =>{
