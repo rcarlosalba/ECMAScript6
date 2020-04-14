@@ -214,22 +214,19 @@ const data= {
 `
 ### Async Await 
 Nos permime manejar el asincronismo: 
-`
-const helloWorld =() =>{
+`const helloWorld =() =>{
     return new Promise((resolve,reject)=>{
         (true)
         ? setTimeout(()=>resolve('helloWorld'),3000)
         : reject(new Error ('Test Error'))
     })
-}
-
-const helloAsync =async() =>{
+}`
+`const helloAsync =async() =>{
     const hello = await helloWorld();
     console.log(hello);
 
 }
-helloAsync();
-`
+helloAsync();`
 - Nos permitirá usar try, catch y trabajar los errores correctamente.
 
 `const another =async() =>{
