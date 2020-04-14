@@ -141,18 +141,19 @@ console.log(calc.sum(2,2))`
 - Es una función que retorna una serie de valores definidos: 
 `function*helloWorld(){
     if(true){
-        yield'Hello, '//Guarda el estado de forma interna
+        yield"Hello, " Guarda el estado de forma interna
     }
     if(true){
-        yield'World '//El segundo valor es llamado cuando se ejecuta el siguiente valor
+        yield"World " El segundo valor es llamado cuando se ejecuta el siguiente valor
     }
         
-};`
-`const generatorHello =helloWorld();`
+}`
+
+`const generatorHello = helloWorld();`
 - Luego puedo utilizar valor next, ejecuto lógica, y al ejecutar el siguiente next se meustra el segundo valor, hasta n next.
 `console.log(generatorHello.next().value);
 console.log(generatorHello.next().value);
-console.log(generatorHello.next().value); // Al no tener ningún valor en el siguiente next, al ejectuar muestra un "Undefined".`
+console.log(generatorHello.next().value); Al no tener ningún valor en el siguiente next, al ejectuar muestra un "Undefined".`
 ## ECMAScript 7
 - Se lanza en Junio de 2016:
 -  Se agrega el metodo includes que verifica el contenido de un arreglo. 
